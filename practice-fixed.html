@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(29, 1, 1, 0.896);
+            margin: 0;
+            height: 3000px;
+        }
+
+        #nav {
+            background-color: rgb(45, 45, 45);
+            width: 100%;
+            height: 75px;
+            position: fixed;
+            z-index: 9;
+        }
+
+        #nav-left {
+            width: 25%;
+            height: 100%;
+            position: absolute;
+        }
+
+        #nav-left-logo {
+            background-color: aqua;
+            width: 55px;
+            height: 55px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            border-radius: 50%;
+            background-image: url(./svg/logo.svg);
+            background-size: cover;
+        }
+
+        #nav-left-search {
+            background-color: rgb(87, 79, 86);
+            width: 300px;
+            height: 55px;
+            position: absolute;
+            top: 10px;
+            left: 90px;
+            border-radius: 50px;
+        }
+
+        #nav-left-search-logo {
+            background-color: rgb(87, 79, 86);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 40px / 2);
+            left: 15px;
+            background-image: url(./svg/search.svg);
+            background-size: cover;
+        }
+
+        #nav-left-search-text {
+            width: 300px;
+            height: 55px;
+            font-size: 22px;
+            color: #b39b9b;
+            position: absolute;
+            top: 10px;
+            left: 75px;
+            border-radius: 50px;
+        }
+
+        #nav-middle {
+            width: 50%;
+            height: 100%;
+            margin: auto;
+        }
+
+        #nav-middle-home {
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 20px;
+            left: 35%;
+            background-image: url(./svg/home.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        #nav-middle-market {
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 20px;
+            left: 45%;
+            background-image: url(./svg/market.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        #nav-middle-club {
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 20px;
+            left: 55%;
+            background-image: url(./svg/club.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        #nav-middle-game {
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 20px;
+            left: 65%;
+            background-image: url(./svg/game.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        #container {
+            background-color: rgba(29, 1, 1, 0.896);
+            width: 80%;
+            height: 1000px;
+            margin: auto;
+            padding-top: 100px;
+        }
+
+        #banner {
+            background-color: blue;
+            width: 100%;
+            height: 500px;
+            background-image: url(./img/Oclock.jpg);
+            background-size: cover;
+            position: relative;
+        }
+
+        #banner-photo {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            left: 100px;
+            bottom: -200px;
+            border: 5px solid black;
+            border-radius: 50%;
+            background-image: url(./img/Patrick.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #banner-name {
+            width: 350px;
+            height: 250px;
+            font-weight: bolder;
+            color: white;
+            font-size: 35px;
+            position: absolute;
+            left: 400px;
+            bottom: -275px;
+        }
+
+        #banner-friend {
+            width: 350px;
+            height: 250px;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            position: absolute;
+            left: 400px;
+            bottom: -325px;
+        }
+
+        #banner-friend-photo-1 {
+            background-color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            position: absolute;
+            left: 400px;
+            bottom: -180px;
+            border: 5px solid black;
+            border-radius: 50%;
+            background-image: url(./img/SpongeBob.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #banner-friend-photo-2 {
+            background-color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            position: absolute;
+            left: 450px;
+            bottom: -180px;
+            border: 5px solid black;
+            border-radius: 50%;
+            background-image: url(./img/Squidward.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #add {
+            background-color: rgb(3, 36, 250);
+            width: 200px;
+            height: 60px;
+            border-radius: 10px;
+            position: absolute;
+            left: 800px;
+            bottom: -180px;
+        }
+
+        #add-photo {
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            background-image: url(./svg/add.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        #add-text {
+            width: 140px;
+            height: 55px;
+            color: white;
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            position: absolute;
+            left: 50px;
+            top: 15px;
+        }
+
+        #edit {
+            background-color: rgb(74, 71, 86);
+            width: 200px;
+            height: 60px;
+            border-radius: 10px;
+            position: absolute;
+            left: 1030px;
+            bottom: -180px;
+        }
+
+        #edit-photo {
+            width: 70px;
+            height: 55px;
+            position: absolute;
+            top: 18px;
+            left: 12px;
+            background-image: url(./img/edit.png);
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        #edit-text {
+            width: 140px;
+            height: 55px;
+            color: white;
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            position: absolute;
+            left: 50px;
+            top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="nav-left">
+            <div id="nav-left-logo"></div>
+            <div id="nav-left-search">
+                <div id="nav-left-search-logo"></div>
+                <div id="nav-left-search-text">搜尋 Facebook</div>
+            </div>
+        </div>
+        <div id="nav-middle">
+            <div id="nav-middle-home"></div>
+            <div id="nav-middle-market"></div>
+            <div id="nav-middle-club"></div>
+            <div id="nav-middle-game"></div>
+        </div>
+        <div id="nav-right">
+            <div id="nav-right-build"></div>
+            <div id="nav-right-messenger"></div>
+            <div id="nav-right-notice"></div>
+            <div id="nav-right-account"></div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="banner">
+            <div id="banner-photo"></div>
+            <div id="banner-name">派大星教授加博士先生</div>
+            <div id="banner-friend">2位 朋友</div>
+            <div id="banner-friend-photo-1"></div>
+            <div id="banner-friend-photo-2"></div>
+            <div id="add">
+                <div id="add-photo"></div>
+                <div id="add-text">新增到限時動態</div>
+            </div>
+            <div id="edit">
+                <div id="edit-photo"></div>
+                <div id="edit-text">編輯個人檔案</div>
+            </div>
+        </div>
+</body>
+
+</html>
